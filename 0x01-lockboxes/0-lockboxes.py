@@ -1,27 +1,26 @@
 #!/usr/bin/python3
-'''LockBoxes '''
+"""Lockboxes challenge"""
 
 from collections import deque
 
 def canUnlockAll(boxes):
     """
-Checks if all boxes in the given list of boxes can be unlocked.
+    Checks if all boxes in the given list of boxes can be unlocked.
+    Parameters:
+	- boxes (list): A list of lists representing the boxes. Each inner list contains the keys that can unlock the corresponding box.
 
-Parameters:
-- boxes (list): A list of lists representing the boxes. Each inner list contains the keys that can unlock the corresponding box.
+	Returns:
+	- bool: True if all boxes can be unlocked, False otherwise.
 
-Returns:
-- bool: True if all boxes can be unlocked, False otherwise.
+	Example:
+	>>> boxes = [[1], [2], [3], []]
+	>>> canUnlockAll(boxes)
+	True
 
-Example:
->>> boxes = [[1], [2], [3], []]
->>> canUnlockAll(boxes)
-True
-
->>> boxes = [[1, 2], [3], [], []]
->>> canUnlockAll(boxes)
-False
-"""
+	>>> boxes = [[1, 2], [3], [], []]
+	>>> canUnlockAll(boxes)
+	False
+	"""
     num_boxes = len(boxes)
     visited = set()  # Set to track visited boxes
     queue = deque([0])  # Start with box 0
