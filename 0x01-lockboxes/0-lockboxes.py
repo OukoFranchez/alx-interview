@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Lockboxes challenge"""
 
-from collections import deque
 
+from collections import deque
 def canUnlockAll(boxes):
     """
     Checks if all boxes in the given list of boxes can be unlocked.
